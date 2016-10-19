@@ -27,7 +27,12 @@ Filter::register('kahlan.coverage', function($chain) {
         'verbosity' => $this->commandLine()->get('coverage'),
         'driver'    => new Xdebug(),
         'path'      => 'application',
-        'colors'    => !$this->commandLine()->get('no-colors')
+        'colors'    => !$this->commandLine()->get('no-colors'),
+        'exclude'   => [
+            'application/views/errors/cli/*.php',
+            'application/views/errors/html/*.php',
+            'application/config/*.php',
+        ],
     ]);
     
     $reporters->add('coverage', $coverage);
