@@ -14,7 +14,7 @@ before_script:
 
 script:
   - vendor/bin/kahlan --coverage=4 --reporter=verbose --clover=build/logs/clover.xml
-  - bin/coveralls -v --exclude-no-stmt
+  - vendor/bin/coveralls -v --exclude-no-stmt
 
 notifications:
   email: false
