@@ -17,7 +17,6 @@ function &get_instance()
 Filter::register('ci.autoloader', function($chain) {
     $this->autoloader()->addClassMap([
         // core
-        'CI_Loader'     => BASEPATH . 'core/Loader.php',
         'CI_Controller' =>  BASEPATH . 'core/Controller.php',
         'CI_Uri' =>  BASEPATH . 'core/Uri.php',
         'CI_Model' => BASEPATH . 'core/Model.php',
