@@ -15,7 +15,7 @@ describe('Welcome_model', function () {
               
         });
         
-        it('return "Hello $name" if passed parameter of greeting is samsonasik', function() {
+        it('return "Hello $name" if passed $name parameter of greeting is not empty string', function() {
             
             $name = 'samsonasik';
             $expected = 'Hello ' . $name;
