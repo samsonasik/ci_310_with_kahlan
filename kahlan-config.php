@@ -43,11 +43,11 @@ Filter::register('ci.autoloader', function($chain) {
     $this->autoloader()->addClassMap([
         // core
         'CI_Controller' =>  BASEPATH . 'core/Controller.php',
-        'CI_URI' =>  BASEPATH . 'core/URI.php',
-        'CI_Model' => BASEPATH . 'core/Model.php',
+        'CI_URI'        =>  BASEPATH . 'core/URI.php',
+        'CI_Model'      => BASEPATH . 'core/Model.php',
         
         // controllers
-        'Welcome' => APPPATH . 'controllers/Welcome.php',
+        'Welcome'       => APPPATH . 'controllers/Welcome.php',
         
         // models
         'Welcome_model' => APPPATH . 'models/Welcome_model.php',
