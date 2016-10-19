@@ -14,5 +14,5 @@ Run
 ---
 
 ```
-vendor/bin/kahlan --coverage=4 --src=application/
+vendor/bin/kahlan --coverage=4 --reporter=verbose
 ```
