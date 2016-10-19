@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for config/mimes.php</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">config/</a> mimes.php
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/2</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;?php
+<span class="cstat-no" title="statement not covered" >def</span>ined('BASEPATH') OR exit('No direct script access allowed');
+&nbsp;
+/*
+| -------------------------------------------------------------------
+| MIME TYPES
+| -------------------------------------------------------------------
+| This file contains an array of mime types.  It is used by the
+| Upload class to help identify allowed file types.
+|
+*/
+return array(
+	'hqx'	=&gt;	array('application/mac-binhex40', 'application/mac-binhex', 'application/x-binhex40', 'application/x-mac-binhex40'),
+	'cpt'	=&gt;	'application/mac-compactpro',
+	'csv'	=&gt;	array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain'),
+	'bin'	=&gt;	array('application/macbinary', 'application/mac-binary', 'application/octet-stream', 'application/x-binary', 'application/x-macbinary'),
+	'dms'	=&gt;	'application/octet-stream',
+	'lha'	=&gt;	'application/octet-stream',
+	'lzh'	=&gt;	'application/octet-stream',
+	'exe'	=&gt;	array('application/octet-stream', 'application/x-msdownload'),
+	'class'	=&gt;	'application/octet-stream',
+	'psd'	=&gt;	array('application/x-photoshop', 'image/vnd.adobe.photoshop'),
+	'so'	=&gt;	'application/octet-stream',
+	'sea'	=&gt;	'application/octet-stream',
+	'dll'	=&gt;	'application/octet-stream',
+	'oda'	=&gt;	'application/oda',
+	'pdf'	=&gt;	array('application/pdf', 'application/force-download', 'application/x-download', 'binary/octet-stream'),
+	'ai'	=&gt;	array('application/pdf', 'application/postscript'),
+	'eps'	=&gt;	'application/postscript',
+	'ps'	=&gt;	'application/postscript',
+	'smi'	=&gt;	'application/smil',
+	'smil'	=&gt;	'application/smil',
+	'mif'	=&gt;	'application/vnd.mif',
+	'xls'	=&gt;	array('application/vnd.ms-excel', 'application/msexcel', 'application/x-msexcel', 'application/x-ms-excel', 'application/x-excel', 'application/x-dos_ms_excel', 'application/xls', 'application/x-xls', 'application/excel', 'application/download', 'application/vnd.ms-office', 'application/msword'),
+	'ppt'	=&gt;	array('application/powerpoint', 'application/vnd.ms-powerpoint', 'application/vnd.ms-office', 'application/msword'),
+	'pptx'	=&gt; 	array('application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/x-zip', 'application/zip'),
+	'wbxml'	=&gt;	'application/wbxml',
+	'wmlc'	=&gt;	'application/wmlc',
+	'dcr'	=&gt;	'application/x-director',
+	'dir'	=&gt;	'application/x-director',
+	'dxr'	=&gt;	'application/x-director',
+	'dvi'	=&gt;	'application/x-dvi',
+	'gtar'	=&gt;	'application/x-gtar',
+	'gz'	=&gt;	'application/x-gzip',
+	'gzip'  =&gt;	'application/x-gzip',
+	'php'	=&gt;	array('application/x-httpd-php', 'application/php', 'application/x-php', 'text/php', 'text/x-php', 'application/x-httpd-php-source'),
+	'php4'	=&gt;	'application/x-httpd-php',
+	'php3'	=&gt;	'application/x-httpd-php',
+	'phtml'	=&gt;	'application/x-httpd-php',
+	'phps'	=&gt;	'application/x-httpd-php-source',
+	'js'	=&gt;	array('application/x-javascript', 'text/plain'),
+	'swf'	=&gt;	'application/x-shockwave-flash',
+	'sit'	=&gt;	'application/x-stuffit',
+	'tar'	=&gt;	'application/x-tar',
+	'tgz'	=&gt;	array('application/x-tar', 'application/x-gzip-compressed'),
+	'z'	=&gt;	'application/x-compress',
+	'xhtml'	=&gt;	'application/xhtml+xml',
+	'xht'	=&gt;	'application/xhtml+xml',
+	'zip'	=&gt;	array('application/x-zip', 'application/zip', 'application/x-zip-compressed', 'application/s-compressed', 'multipart/x-zip'),
+	'rar'	=&gt;	array('application/x-rar', 'application/rar', 'application/x-rar-compressed'),
+	'mid'	=&gt;	'audio/midi',
+	'midi'	=&gt;	'audio/midi',
+	'mpga'	=&gt;	'audio/mpeg',
+	'mp2'	=&gt;	'audio/mpeg',
+	'mp3'	=&gt;	array('audio/mpeg', 'audio/mpg', 'audio/mpeg3', 'audio/mp3'),
+	'aif'	=&gt;	array('audio/x-aiff', 'audio/aiff'),
+	'aiff'	=&gt;	array('audio/x-aiff', 'audio/aiff'),
+	'aifc'	=&gt;	'audio/x-aiff',
+	'ram'	=&gt;	'audio/x-pn-realaudio',
+	'rm'	=&gt;	'audio/x-pn-realaudio',
+	'rpm'	=&gt;	'audio/x-pn-realaudio-plugin',
+	'ra'	=&gt;	'audio/x-realaudio',
+	'rv'	=&gt;	'video/vnd.rn-realvideo',
+	'wav'	=&gt;	array('audio/x-wav', 'audio/wave', 'audio/wav'),
+	'bmp'	=&gt;	array('image/bmp', 'image/x-bmp', 'image/x-bitmap', 'image/x-xbitmap', 'image/x-win-bitmap', 'image/x-windows-bmp', 'image/ms-bmp', 'image/x-ms-bmp', 'application/bmp', 'application/x-bmp', 'application/x-win-bitmap'),
+	'gif'	=&gt;	'image/gif',
+	'jpeg'	=&gt;	array('image/jpeg', 'image/pjpeg'),
+	'jpg'	=&gt;	array('image/jpeg', 'image/pjpeg'),
+	'jpe'	=&gt;	array('image/jpeg', 'image/pjpeg'),
+	'jp2'	=&gt;	array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+	'j2k'	=&gt;	array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+	'jpf'	=&gt;	array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+	'jpg2'	=&gt;	array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+	'jpx'	=&gt;	array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+	'jpm'	=&gt;	array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+	'mj2'	=&gt;	array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+	'mjp2'	=&gt;	array('image/jp2', 'video/mj2', 'image/jpx', 'image/jpm'),
+	'png'	=&gt;	array('image/png',  'image/x-png'),
+	'tiff'	=&gt;	'image/tiff',
+	'tif'	=&gt;	'image/tiff',
+	'css'	=&gt;	array('text/css', 'text/plain'),
+	'html'	=&gt;	array('text/html', 'text/plain'),
+	'htm'	=&gt;	array('text/html', 'text/plain'),
+	'shtml'	=&gt;	array('text/html', 'text/plain'),
+	'txt'	=&gt;	'text/plain',
+	'text'	=&gt;	'text/plain',
+	'log'	=&gt;	array('text/plain', 'text/x-log'),
+	'rtx'	=&gt;	'text/richtext',
+	'rtf'	=&gt;	'text/rtf',
+	'xml'	=&gt;	array('application/xml', 'text/xml', 'text/plain'),
+	'xsl'	=&gt;	array('application/xml', 'text/xsl', 'text/xml'),
+	'mpeg'	=&gt;	'video/mpeg',
+	'mpg'	=&gt;	'video/mpeg',
+	'mpe'	=&gt;	'video/mpeg',
+	'qt'	=&gt;	'video/quicktime',
+	'mov'	=&gt;	'video/quicktime',
+	'avi'	=&gt;	array('video/x-msvideo', 'video/msvideo', 'video/avi', 'application/x-troff-msvideo'),
+	'movie'	=&gt;	'video/x-sgi-movie',
+	'doc'	=&gt;	array('application/msword', 'application/vnd.ms-office'),
+	'docx'	=&gt;	array('application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/zip', 'application/msword', 'application/x-zip'),
+	'dot'	=&gt;	array('application/msword', 'application/vnd.ms-office'),
+	'dotx'	=&gt;	array('application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/zip', 'application/msword'),
+	'xlsx'	=&gt;	array('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/zip', 'application/vnd.ms-excel', 'application/msword', 'application/x-zip'),
+	'word'	=&gt;	array('application/msword', 'application/octet-stream'),
+	'xl'	=&gt;	'application/excel',
+	'eml'	=&gt;	'message/rfc822',
+	'json'  =&gt;	array('application/json', 'text/json'),
+	'pem'   =&gt;	array('application/x-x509-user-cert', 'application/x-pem-file', 'application/octet-stream'),
+	'p10'   =&gt;	array('application/x-pkcs10', 'application/pkcs10'),
+	'p12'   =&gt;	'application/x-pkcs12',
+	'p7a'   =&gt;	'application/x-pkcs7-signature',
+	'p7c'   =&gt;	array('application/pkcs7-mime', 'application/x-pkcs7-mime'),
+	'p7m'   =&gt;	array('application/pkcs7-mime', 'application/x-pkcs7-mime'),
+	'p7r'   =&gt;	'application/x-pkcs7-certreqresp',
+	'p7s'   =&gt;	'application/pkcs7-signature',
+	'crt'   =&gt;	array('application/x-x509-ca-cert', 'application/x-x509-user-cert', 'application/pkix-cert'),
+	'crl'   =&gt;	array('application/pkix-crl', 'application/pkcs-crl'),
+	'der'   =&gt;	'application/x-x509-ca-cert',
+	'kdb'   =&gt;	'application/octet-stream',
+	'pgp'   =&gt;	'application/pgp',
+	'gpg'   =&gt;	'application/gpg-keys',
+	'sst'   =&gt;	'application/octet-stream',
+	'csr'   =&gt;	'application/octet-stream',
+	'rsa'   =&gt;	'application/x-pkcs7',
+	'cer'   =&gt;	array('application/pkix-cert', 'application/x-x509-ca-cert'),
+	'3g2'   =&gt;	'video/3gpp2',
+	'3gp'   =&gt;	array('video/3gp', 'video/3gpp'),
+	'mp4'   =&gt;	'video/mp4',
+	'm4a'   =&gt;	'audio/x-m4a',
+	'f4v'   =&gt;	array('video/mp4', 'video/x-f4v'),
+	'flv'	=&gt;	'video/x-flv',
+	'webm'	=&gt;	'video/webm',
+	'aac'   =&gt;	'audio/x-acc',
+	'm4u'   =&gt;	'application/vnd.mpegurl',
+	'm3u'   =&gt;	'text/plain',
+	'xspf'  =&gt;	'application/xspf+xml',
+	'vlc'   =&gt;	'application/videolan',
+	'wmv'   =&gt;	array('video/x-ms-wmv', 'video/x-ms-asf'),
+	'au'    =&gt;	'audio/x-au',
+	'ac3'   =&gt;	'audio/ac3',
+	'flac'  =&gt;	'audio/x-flac',
+	'ogg'   =&gt;	array('audio/ogg', 'video/ogg', 'application/ogg'),
+	'kmz'	=&gt;	array('application/vnd.google-earth.kmz', 'application/zip', 'application/x-zip'),
+	'kml'	=&gt;	array('application/vnd.google-earth.kml+xml', 'application/xml', 'text/xml'),
+	'ics'	=&gt;	'text/calendar',
+	'ical'	=&gt;	'text/calendar',
+	'zsh'	=&gt;	'text/x-scriptzsh',
+	'7zip'	=&gt;	array('application/x-compressed', 'application/x-zip-compressed', 'application/zip', 'multipart/x-zip'),
+	'cdr'	=&gt;	array('application/cdr', 'application/coreldraw', 'application/x-cdr', 'application/x-coreldraw', 'image/cdr', 'image/x-cdr', 'zz-application/zz-winassoc-cdr'),
+	'wma'	=&gt;	array('audio/x-ms-wma', 'video/x-ms-asf'),
+	'jar'	=&gt;	array('application/java-archive', 'application/x-java-application', 'application/x-jar', 'application/x-compressed'),
+	'svg'	=&gt;	array('image/svg+xml', 'application/xml', 'text/xml'),
+	'vcf'	=&gt;	'text/x-vcard',
+	'srt'	=&gt;	array('text/srt', 'text/plain'),
+	'vtt'	=&gt;	array('text/vtt', 'text/plain'),
+	'ico'	=&gt;	array('image/x-icon', 'image/x-ico', 'image/vnd.microsoft.icon')
+<span class="cstat-no" title="statement not covered" >);</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 20 2016 01:18:29 GMT+0700 (WIB)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
