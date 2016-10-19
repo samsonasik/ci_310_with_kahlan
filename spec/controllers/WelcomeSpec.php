@@ -10,7 +10,7 @@ describe('Welcome', function () {
             define('UTF8_ENABLED', TRUE); // used by CI_Uri    
 
             allow('is_cli')->toBeCalled()->andReturn(false); // to disable _parse_argv call
-            $uri = Double::instance(['extends' => 'CI_Uri']);
+            $uri = Double::instance(['extends' => 'CI_URI']);
             allow($uri)->toReceive('segment')->with(3)->andReturn('samsonasik');
             
             $welcome_model = Double::instance(['extends' => 'Welcome_model']);
