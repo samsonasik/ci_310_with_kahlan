@@ -1,5 +1,6 @@
 <?php
 // ./kahlan-config.php
+use Composer\Autoload\ClassMapGenerator;
 use Kahlan\Filter\Filter;
 use Kahlan\Reporter\Coverage;
 use Kahlan\Reporter\Coverage\Driver\Xdebug;
@@ -38,20 +39,18 @@ Filter::register('kahlan.coverage', function($chain) {
     $reporters->add('coverage', $coverage);
 });
 Filter::apply($this, 'coverage', 'kahlan.coverage');
- 
+
 Filter::register('ci.autoloader', function($chain) {
-    $this->autoloader()->addClassMap([
-        // core
-        'CI_Controller' =>  BASEPATH . 'core/Controller.php',
-        'CI_URI'        =>  BASEPATH . 'core/URI.php',
-        'CI_Model'      => BASEPATH . 'core/Model.php',
-        
-        // controllers
-        'Welcome'       => APPPATH . 'controllers/Welcome.php',
-        
-        // models
-        'Welcome_model' => APPPATH . 'models/Welcome_model.php',
-    ]);
+    $this->autoloader()->addClassMap(
+        ClassMapGenerator::createMap(BASEPATH . 'core')
+    );
+    $this->autoloader()->addClassMap(
+        ClassMapGenerator::createMap(APPPATH . 'controllers')
+    );
+    $this->autoloader()->addClassMap(
+        ClassMapGenerator::createMap(APPPATH . 'models')
+    );
+    
     return $chain->next();
 });
 Filter::apply($this, 'namespaces', 'ci.autoloader');

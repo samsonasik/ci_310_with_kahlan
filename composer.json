@@ -19,6 +19,7 @@
 	"require-dev": {
 		"mikey179/vfsStream": "1.1.*",
 		"kahlan/kahlan": "^3.0",
-		"satooshi/php-coveralls": "^1.0"
+		"satooshi/php-coveralls": "^1.0",
+		"composer/composer": "^1.2"
 	}
 }
